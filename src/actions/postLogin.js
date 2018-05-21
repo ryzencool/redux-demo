@@ -1,7 +1,7 @@
 import { POST_LOGIN } from "./types";
 
-export const postLogin = () => dispatch => {
-  fetch("https://reqres.in/api/users?page=2")
+export const postLogin = (page = 1) => dispatch => {
+  fetch("https://reqres.in/api/users?page=" + page)
     .then(res => {
       return res.json();
     })
