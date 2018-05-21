@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { postLogin } from "../actions/postLogin";
 import { Button, Input, Row, Col, Table } from "antd";
-
+import DateUtil from "../utils/dateUtil";
 class PostLogin extends Component {
   constructor() {
     super();
@@ -66,7 +66,11 @@ class PostLogin extends Component {
         </Row>
         <Row>
           <Col>
-            <Table columns={columns} dataSource={content} rowKey= {it => it.id}/>
+            <Table
+              columns={columns}
+              dataSource={content}
+              rowKey={it => it.id}
+            />
           </Col>
         </Row>
       </div>
