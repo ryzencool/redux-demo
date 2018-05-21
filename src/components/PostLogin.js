@@ -22,8 +22,8 @@ class PostLogin extends Component {
 
   render() {
     // const content = this.props.data.map(i => <h1>{i}</h1>);
-    const content = this.props.data != null ? this.props.data.data : []
-    const renderContent = content.map(it => <h1>{it.avatar}</h1>)
+    const content = this.props.data != null ? this.props.data.data : [];
+    const renderContent = content.map((it, index) => <h1 key={index}>{it.avatar}</h1>);
     return (
       <div>
         <input
@@ -31,7 +31,7 @@ class PostLogin extends Component {
           onChange={this.handleInputOnChange.bind(this)}
         />
         <button onClick={this.handleButtonClick.bind(this)}>点击我</button>
-        {renderContent}
+        <div>{renderContent}</div>
       </div>
     );
   }
