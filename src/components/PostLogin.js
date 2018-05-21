@@ -60,7 +60,7 @@ class PostLogin extends Component {
           </Col>
           <Col span={2}>
             <Button type="primary" onClick={this.handleButtonClick.bind(this)}>
-              点击我
+              点点点...
             </Button>
           </Col>
         </Row>
