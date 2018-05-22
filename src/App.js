@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import PostLogin from "./components/PostLogin";
 import { Provider } from "react-redux";
