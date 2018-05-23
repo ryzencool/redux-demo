@@ -5,20 +5,12 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import { Layout, Menu, Breadcrumb, Icon } from "antd";
 import { Route, NavLink } from "react-router-dom";
-import { postLogin } from "./actions/postLogin";
+
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 
 class App extends Component {
-  // render() {
-  //   return (
-  //     <Provider store={store}>
-  //       <div className="App">
-  //         <PostLogin />
-  //       </div>
-  //     </Provider>
-  //   );
-  // }
+  
   state = {
     collapsed: false
   };
@@ -83,7 +75,7 @@ class App extends Component {
                 <Breadcrumb.Item>Bill</Breadcrumb.Item>
               </Breadcrumb>
               <div style={{ padding: 24, background: "#fff", minHeight: 360 }}>
-                <Route path="/post" component={PostLogin}/>
+                <Route path="/post" component={PostLogin} />
               </div>
             </Content>
             <Footer style={{ textAlign: "center" }}>

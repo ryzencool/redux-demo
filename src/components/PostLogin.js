@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { postLogin } from "../actions/postLogin";
 import { Button, Input, Row, Col, Table } from "antd";
 import DateUtil from "../utils/dateUtil";
+import {withRouter} from 'react-router-dom'
 class PostLogin extends Component {
   constructor() {
     super();
@@ -90,4 +91,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostLogin);
+export default withRouter( connect(mapStateToProps, mapDispatchToProps)(PostLogin));
